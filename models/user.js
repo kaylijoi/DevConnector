@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-// Create user schema
-// By default, required is false
+//Create user schema
 const UserSchema = new Schema({
   name: {
     type: String,
@@ -25,6 +24,5 @@ const UserSchema = new Schema({
   }
 });
 
-// Starts building collection
-const User = mongoose.model('users', UserSchema)
+const User = mongoose.model('users', UserSchema);
 module.exports = User;

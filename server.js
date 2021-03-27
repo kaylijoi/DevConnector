@@ -4,9 +4,19 @@ const express = require('express');
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 const users = require('./routes/api/users');
+const passport = require('passport');
 const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 const app = express();
+
+//Passport config
+app.use(passport.initialize());
+require('./config/passport')(passport)
+
+
+//Body-parser config
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
 //Db configuration
 const db = keys.mongoURI;
@@ -27,3 +37,5 @@ app.use('/api/posts', posts);
 // All callbacks are arrow functions
 const port = 9000;
 app.listen(port, () => console.log(`Server is running on port ${port}`));
+
+
