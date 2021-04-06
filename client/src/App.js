@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
-import Navbar from './components/layouts/Navbar';
-import Landing from './components/layouts/Landing';
-import Footer from './components/layouts/Footer';
+import Navbar from './components/layout/Navbar';
+import Landing from './components/layout/Landing';
+import Footer from './components/layout/Footer';
 import Login from './components/auth/Login';
 import Register from './components/auth/Register';
-
 
 export default class App extends Component {
   render() {
@@ -23,4 +22,3 @@ export default class App extends Component {
     )
   }
 }
-
