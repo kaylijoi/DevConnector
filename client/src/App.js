@@ -9,7 +9,6 @@ import Login from './components/auth/Login';
 import Register from './components/auth/Register';
 import store from './store';
 
-
 export default class App extends Component {
   render() {
     return (
